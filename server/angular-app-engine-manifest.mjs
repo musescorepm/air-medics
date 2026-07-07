@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/air-medics',
+  basePath: '/',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""
