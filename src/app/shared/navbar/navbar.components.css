@@ -1,0 +1,93 @@
+/* NAVBAR CONTAINER */
+.navbar {
+  background: #0a4d8c;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE: LOGO + COMPANY NAME */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.company-name {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* RIGHT SIDE: MENU */
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right > li > a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* DROPDOWN BASE */
+.dropdown {
+  position: relative;
+}
+
+/* FIX: dropdown stays open when hovering */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* DROPDOWN LABEL (About ▾) */
+.dropdown-label {
+  cursor: pointer;
+  color: white;        /* FIX: keeps About ▾ white */
+  font: inherit;
+  padding: 0;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  min-width: 260px;
+  z-index: 10;
+  pointer-events: auto; /* FIX: ensures links can be clicked */
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #333 !important; /* FIX: prevents About ▾ from turning black */
+  text-decoration: none;
+  font-size: 0.95rem;
+  pointer-events: auto;   /* FIX: ensures routerLink fires */
+  cursor: pointer;
+}
+
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+}

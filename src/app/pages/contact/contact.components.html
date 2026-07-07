@@ -1,0 +1,45 @@
+<section class="contact-hero">
+  <h1>Contact Us</h1>
+  <p>Have questions or need service? We're here to help.</p>
+</section>
+
+<section class="contact-container">
+
+  <form (ngSubmit)="sendMessage()">
+
+    <label>Name</label>
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Your email">
+
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="phone" name="phone" placeholder="Your phone number">
+
+    <label>Message</label>
+    <textarea rows="5" [(ngModel)]="message" name="message" placeholder="How can we help?"></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+    <p><strong>Phone:</strong> 613-800-1851</p>
+    <p><strong>Email:</strong>  info@airmedicsrangers.ca</p>
+    <p><strong>Location:</strong> Ottawa, Ontario</p>
+
+    <h3>Response Speed:</h3>
+    <ul>
+      <li> We're here to address any queries or collaborations. </li>
+      <li> Your response will be addressed and reviewed between 1 - 10 days</li>
+      <li> Please write feedback or concerns that you have</li>
+    </ul>
+  </div>
+
+</section>
+
+<section class="contact-cta">
+  <h2>Prefer to talk directly?</h2>
+  <a routerLink="/services" class="cta-btn">View Our Services</a>
+</section>
